@@ -1,0 +1,18 @@
+{
+    "clientID": "A6uS2PbUmZkkSfAJboC1AVdD6uMa",
+    "baseUrl": "https://api.asgardeo.io/t/dushan",
+    "signInRedirectURL": "https://localhost:3000",
+    "signOutRedirectURL": "https://localhost:3000",
+    "scope": ["openid","email","profile"],
+    "stsConfig": {
+        "client_id": "HIKpt9ZBWbaKEDTf8pVLxEfkJmca",
+        "orgHandle": "dushanabeyruwanoonrascj",
+        "scope": ["openid"]
+    },
+    "endpoints": {
+        "authorizationEndpoint": "https://api.asgardeo.io/t/dushan/oauth2/authorize",
+        "tokenEndpoint": "https://api.asgardeo.io/t/dushan/oauth2/token",
+        "endSessionEndpoint": "https://api.asgardeo.io/t/dushan/oidc/logout"
+      },
+    "stsTokenEndpoint": "https://sts.choreo.dev/oauth2/token"
+}

@@ -22,7 +22,7 @@ import { default as authConfig } from "../config.json";
 import REACT_LOGO from "../images/react-logo.png";
 import { DefaultLayout } from "../layouts/default";
 import { AuthenticationResponse } from "../components";
-import { SubmitPoliceReportResponse } from "../components";
+import { RequestGramaCertResponse } from "../components";
 import {
     BrowserRouter as Router,
     Switch,
@@ -331,7 +331,7 @@ export const HomePagePoliceReport: FunctionComponent<HomePagePropsInterface> = (
                         <><div>
                             <h1>Grama Cert Request</h1>
                             <br />
-                            <SubmitPoliceReportResponse
+                            <RequestGramaCertResponse
                                 derivedResponse={derivedAuthenticationState} />
                             <br />
                             <button

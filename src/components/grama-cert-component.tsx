@@ -19,19 +19,19 @@
 import { BasicUserInfo } from "@asgardeo/auth-react";
 import React, { FunctionComponent, ReactElement, useState, } from "react";
 import ReactJson from "react-json-view";
-import { useAsgardeoToken } from '../components/hooks/auth';
+import { useAsgardeoToken } from './hooks/auth';
 
 /**
  * Decoded ID Token Response component Prop types interface.
  */
-interface SubmitPoliceReportResponsePropsInterface {
+interface RequestGramaCertResponsePropsInterface {
     /**
      * Derived Authenticated Response.
      */
     derivedResponse?: any;
 }
 
-export interface DerivedASubmitPoliceReportResponseInterface {
+export interface DerivedARequestGramaCertResponseInterface {
     /**
      * Response from the `getBasicUserInfo()` function from the SDK context.
      */
@@ -57,8 +57,8 @@ export interface DerivedASubmitPoliceReportResponseInterface {
  *
  * @return {React.ReactElement}
  */
-export const SubmitPoliceReportResponse: FunctionComponent<SubmitPoliceReportResponsePropsInterface> = (
-    props: SubmitPoliceReportResponsePropsInterface
+export const RequestGramaCertResponse: FunctionComponent<RequestGramaCertResponsePropsInterface> = (
+    props: RequestGramaCertResponsePropsInterface
 ): ReactElement => {
 
     const {
@@ -102,7 +102,7 @@ export const SubmitPoliceReportResponse: FunctionComponent<SubmitPoliceReportRes
                 setEmail(emailval);
                 setSsnno(ssn);
                 //alert(ssn);
-                setMessage("Request For Police Report Submitted Successfully! Your Reference# is "+resJson.ref);
+                setMessage("Grama Cert Request Submitted Successfully! Your Reference# is "+resJson.ref);
             } else {
                 setMessage("Some error occured");
             }

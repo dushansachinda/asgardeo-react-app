@@ -7,7 +7,8 @@
     "stsConfig": {
         "client_id": "HIKpt9ZBWbaKEDTf8pVLxEfkJmca",
         "orgHandle": "dushanabeyruwanoonrascj",
-        "scope": ["openid"]
+        "scope": ["openid"],
+        "chreoAppCSCK" :"SElLcHQ5WkJXYmFLRURUZjhwVkx4RWZrSm1jYToxWXI3ajJ2MUx1aW5LQnNUNGZjcWthYlBVWElh"
     },
     "endpoints": {
         "authorizationEndpoint": "https://api.asgardeo.io/t/dushan/oauth2/authorize",

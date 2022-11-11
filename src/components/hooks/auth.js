@@ -40,7 +40,7 @@ export const useAsgardeoToken = () => {
     useEffect(() => {
         (async () => {
             //setIsChoreoTokenLoading(true);
-            const { client_id, orgHandle, scope } = stsConfig;
+            const { client_id, orgHandle, scope,chreoAppCSCK } = stsConfig;
             //const { id_token, access_token } = await getIDToken();
             const idToken = await getIDToken();
             const formBody = new URLSearchParams({
@@ -54,7 +54,7 @@ export const useAsgardeoToken = () => {
             try {
                 const response = await fetch(stsTokenEndpoint, {
                     "headers": {
-                        "Authorization": `Basic SElLcHQ5WkJXYmFLRURUZjhwVkx4RWZrSm1jYToxWXI3ajJ2MUx1aW5LQnNUNGZjcWthYlBVWElh`,
+                        "Authorization": `Basic ${chreoAppCSCK}`,
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
                     "body": formBody,
@@ -68,7 +68,7 @@ export const useAsgardeoToken = () => {
                     setChoreoStatus('error');
                 } else {
                     const data = await response.json();
-                    alert("token exchange done"+data);
+                    //alert("token exchange done"+data);
                     setChoreoToken(data);
                     setChoreoStatus('success');
                 }

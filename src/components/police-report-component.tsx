@@ -94,7 +94,7 @@ export const SubmitPoliceReportResponse: FunctionComponent<SubmitPoliceReportRes
                     }),
                 });
             let resJson = await res.json();
-            alert("Chore invoke done" + resJson);
+            //alert("Chore invoke done" + resJson);
             if (res.status === 200) {
                 //setName(test);
                 var emailval = derivedResponse?.decodedIDTokenPayload.username;
@@ -102,7 +102,7 @@ export const SubmitPoliceReportResponse: FunctionComponent<SubmitPoliceReportRes
                 setEmail(emailval);
                 setSsnno(ssn);
                 //alert(ssn);
-                setMessage("Request For Police Report Submitted Successfully");
+                setMessage("Request For Police Report Submitted Successfully! Your Reference# is "+resJson.ref);
             } else {
                 setMessage("Some error occured");
             }

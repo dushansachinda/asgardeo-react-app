@@ -15,5 +15,6 @@
         "tokenEndpoint": "https://api.asgardeo.io/t/dushan/oauth2/token",
         "endSessionEndpoint": "https://api.asgardeo.io/t/dushan/oidc/logout"
       },
-    "stsTokenEndpoint": "https://sts.choreo.dev/oauth2/token"
+    "stsTokenEndpoint": "https://sts.choreo.dev/oauth2/token",
+    "REACT_APP_API_BASE_URL":"https://5437061a-64e8-4708-99ca-58f1efc33c5e-dev.e1-us-east-azure.choreoapis.dev/avlx/gramaapi/1.0.0"
 }

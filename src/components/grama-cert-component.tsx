@@ -20,7 +20,9 @@ import { BasicUserInfo } from "@asgardeo/auth-react";
 import React, { FunctionComponent, ReactElement, useState, } from "react";
 import ReactJson from "react-json-view";
 import { useAsgardeoToken } from './hooks/auth';
+import { default as asgardeoSdkConfig } from './config/asgardeo.json';
 
+//export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 /**
  * Decoded ID Token Response component Prop types interface.
  */
@@ -62,6 +64,14 @@ export const RequestGramaCertResponse: FunctionComponent<RequestGramaCertRespons
 ): ReactElement => {
 
     const {
+        endpoints: { tokenEndpoint },
+        clientID,
+        stsTokenEndpoint,
+        stsConfig,
+        REACT_APP_API_BASE_URL
+    } = asgardeoSdkConfig;
+
+    const {
         derivedResponse
     } = props;
     let bar = props.derivedResponse?.decodedIDTokenPayload.username
@@ -79,7 +89,7 @@ export const RequestGramaCertResponse: FunctionComponent<RequestGramaCertRespons
     let handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         try {
-            let res = await fetch("https://5437061a-64e8-4708-99ca-58f1efc33c5e-dev.e1-us-east-azure.choreoapis.dev/avlx/gramaapi/1.0.0/gramaCertRequest",
+            let res = await fetch(REACT_APP_API_BASE_URL+"/gramaCertRequest",
                 {
                     headers: {
                         Authorization: `bearer ${choreoTokenData.access_token}`,

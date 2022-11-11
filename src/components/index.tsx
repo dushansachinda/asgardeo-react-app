@@ -17,4 +17,4 @@
  */
 
 export * from "./authentication-response";
-export * from "./police-report-component";
+export * from "./grama-cert-component";
